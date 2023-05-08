@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects Exercise</title>
+
+  </head>
+  <body>
+    <h3>Notes</h3>
+    <p>JSON has javascript notation with less features: not support ' and functions 
+      
+      <li>
+        whwn we send data betveen computers
+      </li>
+      <li>
+        when we store data
+      </li>
+    </p>
+    <p>
+      JSON built in object is to convert from javascript to JSON 
+      
+    </p>
+    
+    <script>
+      /*
+      const product = {
+        name:'socks',
+        price:'1090'   
+      };
+      
+      product.name = 'ball';
+      console.log(product.name);
+      
+      product.value = true;
+      console.log(product);
+      
+      delete product.value;
+      console.log(product);
+
+      const product2 = {
+        name:'shirt',
+        deliveryTime:'1day',
+        rating:{
+          stars:4.5,
+          count:87
+        },
+        fun: function finction1(){
+          console.log('function inside a object');
+        }
+      }
+      console.log(JSON.stringify(product2));
+      const stringProduct2 = JSON.stringify(product2);
+      console.log(JSON.parse(stringProduct2));
+      */
+       const object1 = {
+        message:'hello'
+       } 
+
+      const object2 = object1;
+
+      //console.log(object2.message);
+
+      const object3 = {
+        message:'hello'
+      }
+
+      console.log(object1===object2);
+      console.log(object1===object3);
+
+      object2.message='good bye';
+      console.log(object1.message);
+      console.log(object2.message);
+
+      let {message} = object1;
+
+      //console.log(message);
+
+      object1.message='fui';
+
+      console.log(message);
+      console.log(object1.message);
+      console.log(message);
+
+     
+    
+
+
+    </script>
+  </body>
+</html>
