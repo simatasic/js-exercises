@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM project</title>
+    <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+      }
+      a{
+        margin-bottom: 50px;
+        color: rgb(163, 97, 224);
+      }
+      p{
+        line-height: 30px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>YouTube Suscribe Button <br>
+    <button class="js-subsribe-button" onclick="
+        subscribe();
+      ">Subscribe</button></p>
+    <P>Rock Paper Scissors <br>
+    <a href="#">Click here</a></P>
+    <p>Amazon Shipping Calculstor <br>
+      Orders Under $40 = +$10 shipping <br>
+      Order over $40 = FREE shipping. <br>
+    <input class="js-cost-input" type="text" placeholder="Cost of Order">
+    <button class="js-calculate-button">Calculate</button></p>
+    
+    <script>
+      function subscribe(){
+          const buttonElement = document.querySelector('.js-subsribe-button');
+        if(buttonElement.innerHTML==='Subscribe'){
+          buttonElement.innerHTML='Subscribed';
+        }
+        else {
+          buttonElement.innerHTML='Subscribe';
+        }
+      }
+    </script>
+  </body>
+</html>
