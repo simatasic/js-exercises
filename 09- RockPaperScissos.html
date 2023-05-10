@@ -30,10 +30,12 @@
           const result2 = compare('Scissors');
       ">Scissors</button>
       <button onclick="score.losses = 0; score.wins = 0; score.ties = 0; uprdateScore();
-      localStorage.removeItem('score');">
+      localStorage.removeItem('score'); ">
         Reset Score
       </button>
     </div>
+    <p class="js-moves"></p>
+    <p class="js-result"></p>
     <p class="js-score"></p>
    <script>
 
@@ -116,16 +118,21 @@
           //alert(`you play Rock and computer play ${compMove} ${result} 
           //Wins: ${score.wins} losses: ${score.losses} ties: ${score.ties} `);
         }
-        alert(`you play Rock and computer play ${compMove} ${result} 
-          Wins: ${score.wins} losses: ${score.losses} ties: ${score.ties} `);
+
+        document.querySelector('.js-moves').innerHTML=`you play ${move} and computer play ${compMove}`;
+        document.querySelector('.js-result').innerHTML=result;
+        //alert(`you play ${move} and computer play ${compMove} ${result} 
+        //  Wins: ${score.wins} losses: ${score.losses} ties: ${score.ties} `);
         //guardando valores em localStorage usando metodo setItem 
         localStorage.setItem('score',JSON.stringify(score));
+        
         uprdateScore();
     }
 
     function uprdateScore(){
       document.querySelector('.js-score').innerHTML=`Wins: ${score.wins} losses: ${score.losses} ties: ${score.ties} `;
     }
+
 
    </script> 
   </body>
