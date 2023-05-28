@@ -9,9 +9,26 @@ function addTodo(){
   else{
     todoList.push(name);
     task.value = '';
-    console.log(todoList);  
+    console.log(todoList);
+    let todoListHTML = '';
+    for (i=0; i<todoList.length; i++){
+      const todo = todoList[i];
+      const html = `<p>${todo}</p>`;
+      todoListHTML += html;
+      console.log(todoListHTML);
+    }
+    
+    
+    
+    
+    document.querySelector(".js-todo-list").innerHTML = todoListHTML;/**/
+    
   } 
 }
+ 
+
+
+
 
 function reset(){
    todoList = [];
