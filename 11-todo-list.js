@@ -1,4 +1,6 @@
 let todoList = [];
+renderTodoList();
+
 function addTodo(){
   const task = document.querySelector('.js-todo-input');
   const name = task.value;
@@ -8,27 +10,21 @@ function addTodo(){
   }
   else{
     todoList.push(name);
-    task.value = '';
-    console.log(todoList);
+    renderTodoList();
+    document.querySelector('.js-todo-input').value = '';
+  } 
+}
+ 
+function renderTodoList(){
+   /* task.value = '';*/
     let todoListHTML = '';
     for (i=0; i<todoList.length; i++){
       const todo = todoList[i];
       const html = `<p>${todo}</p>`;
       todoListHTML += html;
-      console.log(todoListHTML);
     }
-    
-    
-    
-    
-    document.querySelector(".js-todo-list").innerHTML = todoListHTML;/**/
-    
-  } 
+    document.querySelector(".js-todo-list").innerHTML = todoListHTML;
 }
- 
-
-
-
 
 function reset(){
    todoList = [];

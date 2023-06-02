@@ -2,10 +2,22 @@
 <html>
   <head>
     <title>Todo List</title>
+    <style>
+      .sima{
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        column-gap: 15px;
+      }
+    </style>
   </head>
   <body>
+    <div class="sima">
+      <div style="background-color: lightblue;">5</div>
+      <div style="background-color: lightpink;">7</div>
+
+    </div>
     <p>Todo list</p>
-    <input class="js-todo-input" type="text" placeholder="Todo name">
+    <input class="js-todo-input" type="text" placeholder="Enter task todo">
     <button onclick="
       addTodo();
     ">Add</button>
