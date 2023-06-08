@@ -2,16 +2,21 @@ let todoList = [{name:'make a dinner',dueDate:'2023-06-05'}];
 renderTodoList();
 
 function addTodo(){
+
   const task = document.querySelector('.js-todo-input');
   const name = task.value;
+  const dueDateImputElement = document.querySelector('.js-todo-date');
+  const dueDate = dueDateImputElement.value;
+
   if(name==='reset'){
     reset();
     console.log('no more tasks'); 
   }
   else{
-    todoList.push(name);
+    todoList.push({name:name,dueDate:dueDate});//{name,dueDate}
     renderTodoList();
     document.querySelector('.js-todo-input').value = '';
+    document.querySelector('.js-todo-date').value = '';
   } 
 }
  
@@ -24,12 +29,19 @@ function renderTodoList(){
       //const dueDate = todoObject.dueDate;
       const {name,dueDate} = todoObject;
       const html = `
-                    <p>
-                      ${name},${dueDate}
-                      <button onclick="
+                    <div class="list-name">
+                      ${name}
+                    </div>
+                    <div class="list-date">
+                      ${dueDate}
+                    </div>
+                      <button class="delete-button" onclick="
                         deleteTodo(${i},1);
                         ">Delete</button>
-                    </p>`;
+                    `;
+
+
+
       console.log(todoList);              
       todoListHTML += html;
     }

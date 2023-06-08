@@ -1,0 +1,47 @@
+.sima{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    column-gap: 15px;
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: 200px 170px 150px;
+    column-gap: 15px;
+    
+}
+
+.division{
+    margin-top: 5px;
+    border-bottom: 2px solid rgb(182, 182, 183);
+}
+
+.js-todo-input, .js-todo-date{
+    height: 40px;
+    background-color: rgb(243, 243, 243);
+    border:none;
+    padding-left: 10px;
+}
+.add-button{
+    background-color: rgb(13, 172, 13);
+    color: white;
+    border: none;
+}
+.js-todo-list{
+    display: grid;
+    grid-template-columns:200px 170px 150px ;
+    column-gap: 15px;
+    row-gap: 10px;
+    align-items: center;
+    
+}
+.delete-button{
+    height: 30px;
+    border: none;
+    background-color: red;
+    color: white;
+}
+.list-date, .list-name {
+    padding-left: 10px;
+}
+
