@@ -18,14 +18,18 @@
       <button onclick=" 
           const result2 = compare('Scissors');
       ">Scissors</button>
-      <button onclick="score.losses = 0; score.wins = 0; score.ties = 0; uprdateScore();
-      localStorage.removeItem('score'); ">
-        Reset Score
-      </button>
-    </div>
+      
     <p class="js-moves"></p>
     <p class="js-result"></p>
     <p class="js-score"></p>
+
+    <button class="js-resetscore-button" onclick="score.losses = 0; score.wins = 0; score.ties = 0; uprdateScore();
+      localStorage.removeItem('score'); ">
+        Reset Score
+      </button>
+      <button class="js-autoplay-button">Auto Play</button>
+    </div>
+    
    <script src="12-rock-paper-scisors.js">
 
    </script> 
