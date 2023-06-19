@@ -3,9 +3,8 @@
   <head>
     <title>Arrays and Loops</title>
   </head>
-  <body>
+    <body>
 
-    <div class="js-display"></div>
     <script>
 /*
       const nums = ['sima','marina','manuela']; 
@@ -21,20 +20,7 @@
       document.querySelector('.js-display').innerHTML = arraySwap(nums);
 
 
-
-     let perTwoa=[];
-     let i=0;      
-      while(i<11){
-        perTwoa.push(i);
-        i+=2;
-      }
-
-      console.log(perTwoa);
-       document.querySelector('.js-display').innerHTML= perTwoa;
-*/
-/* 
-
-     const myArray = [10,20,30];
+     /* const myArray = [10,20,30];
 
       console.log(myArray);
 
@@ -77,38 +63,35 @@
         console.log(value);
       }*/
       /*
-
-      const nums = [2,4,20,30,67]; 
-      console.log(nums);
-
-      document.querySelector('.js-display').innerHTML = getLast(nums);
-      
-      function getLast(nums){
-        const lastIndex = nums.length - 1;
-        const lastValue = nums[lastIndex];
-       
-        return lastValue;
-      }
-*/
-
-
-  /*    
-
-      nums[lastIndex] = 99;
-
-      console.log(lastIndex);
-
-
+      const nums = [1,1,3];
+      const numsd = [];
 
       for (i=0;i<nums.length;i++){
         numsd[i]=2*nums[i];
       }
 
       console.log(`Array dubled is:${numsd}`);
-
-*/
-
-
+       */
+     /*
+      for(i=1;i<=10;i++){
+        if(i%3===0){
+          continue;
+        }
+        console.log(i);
+        if (i===8) {
+          break;
+        }
+      }*/
+      
+      let i=1;
+      while(i<=10){
+        if(i%3===0){
+            i++;
+            continue;
+          } 
+        console.log(i);
+        i++;
+      }
 
     </script>
   </body>

@@ -2,30 +2,24 @@
 <html>
   <head>
     <title>Todo List</title>
-    <style>
-      .sima{
-        display: grid;
-        grid-template-columns: 5fr 7fr;
-        column-gap: 15px;
-      }
-    </style>
+    <link rel="stylesheet" href="11-todo-list.css">
   </head>
   <body>
     <div class="sima">
       <div style="background-color: lightblue;">5</div>
       <div style="background-color: lightpink;">7</div>
-
     </div>
     <p>Todo list</p>
-    <input class="js-todo-input" type="text" placeholder="Enter task todo">
-    <input type="date" class="js-todo-date">
-    <button onclick="
-      addTodo();
-    ">Add</button>
-    <div class="js-todo-list" style="margin-top: 20px;" >
-
+    <div class="grid">
+      <input class="js-todo-input" type="text" placeholder="Enter task todo">
+      <input type="date" class="js-todo-date">
+      <button class="add-button" onclick="addTodo();">Add</button>
     </div>
 
+      <div class="division"></div>
+
+      <div class="js-todo-list" style="margin-top: 20px;" ></div>
+    
     <script src="11-todo-list.js">
     </script>
   </body>

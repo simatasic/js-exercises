@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paper Rock Scissors</title>
+    <link rel="stylesheet" href="12-rock-paper-scissos.css">
+  </head>
+  <body>
+    <hr>
+    <h3>Rock Paper Scissors</h3>
+    <hr>   
+    <div class="button-container">
+      <button onclick="         
+          const result = compare('Rock');  
+        ">Rock</button>
+      <button onclick="         
+          const result1 = compare('Paper');
+      ">Paper</button>
+      <button onclick=" 
+          const result2 = compare('Scissors');
+      ">Scissors</button>
+      <button onclick="score.losses = 0; score.wins = 0; score.ties = 0; uprdateScore();
+      localStorage.removeItem('score'); ">
+        Reset Score
+      </button>
+    </div>
+    <p class="js-moves"></p>
+    <p class="js-result"></p>
+    <p class="js-score"></p>
+   <script src="12-rock-paper-scisors.js">
+
+   </script> 
+  </body>
+</html>
