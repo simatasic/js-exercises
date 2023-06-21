@@ -4,7 +4,20 @@
 <title>Advanced Functions</title>
 </head>
 <body>
+    <button class="js-button">Click</button>
     <script>
+
+        const buttonElement =  document.querySelector('.js-button');
+
+        const eventF = ()=>{console.log('click');};
+
+        buttonElement.addEventListener('click',eventF);
+        
+        buttonElement.removeEventListener('click',eventF);
+        
+        buttonElement.addEventListener('click',()=>{
+            console.log('click2');
+        });
         /*
         function greeting(){
             console.log('hello');
@@ -37,20 +50,43 @@
             },1000);
 
 */
-        
-       ['make dinner','wash dishes','tatch youtube']
-       .forEach(function(value,index){
-        console.log(index);
-        console.log(value);
-       })
+        /*
+        const todoList=  ['make dinner','wash dishes','watch youtube'];
+        todoList.forEach((value,index)=>console.log(value,index));
+        todoList.forEach(function(value,index){
+            console.log(value);
+            console.log(index);
+        },)
+    
+
+        const regularFunction = function(){
+            console.log('regular hello');
+        };
+
+        const arrowFunction = ()=>{
+            console.log('arrow hello');
+        };
+
+        regularFunction();
+
+        setTimeout(arrowFunction,1000);
+
+        const onePraram = (param)=>{console.log(param+1)};
        
        
+        onePraram(2);
 
+        const oneLine = () => 2+3;
 
-
+        console.log(oneLine());
      
+        const object2 = {
+            method:()=>{},
+            method(){}
+        };
+       */
 
-       
+
     </script>
 </body>
 </html>

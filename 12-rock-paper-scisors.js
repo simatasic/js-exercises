@@ -27,8 +27,8 @@ let score = JSON.parse(localStorage.getItem('score'))||{
   let intervalId;
   function autoPlay(){
     if(!isAutoPlaying){
-      
-      intervalId = setInterval(function(){
+  //arrow function    
+      intervalId = setInterval(()=>{
         const playerMove = pickCompMove();
         compare(playerMove)
       },1000)
