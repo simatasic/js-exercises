@@ -6,6 +6,43 @@ let score = JSON.parse(localStorage.getItem('score'))||{
     ties:0
   };
 
+  document.querySelector('.js-rock-button').addEventListener('click', ()=>{
+    compare('Rock')
+  });
+
+  document.querySelector('.js-paper-button').addEventListener('click',()=>{
+    compare('Paper');
+  });
+
+  document.querySelector('.js-scissors-button').addEventListener('click',()=>{
+    compare('Scissors');
+  });
+
+  document.body.addEventListener('keydown',(event) => {
+    console.log(event.key);
+    if(event.key==='r'){
+      compare('Rock');
+    }
+    else if(event.key==='p'){
+      compare('Paper');
+    }
+    else if(event.key==='s'){
+      compare('Scissors');
+    }
+  });
+
+document.querySelector('.js-resetscore-button').addEventListener('click',()=>{
+  score.losses = 0;
+  score.wins = 0;
+  score.ties = 0; 
+  uprdateScore();
+  localStorage.removeItem('score'); 
+});
+
+document.querySelector('.js-autoplay-button').addEventListener('click',()=>{
+  autoPlay();
+});
+
   uprdateScore();
 
   function pickCompMove(){
@@ -25,6 +62,12 @@ let score = JSON.parse(localStorage.getItem('score'))||{
   
   let isAutoPlaying = false;
   let intervalId;
+
+  //
+
+
+
+
   function autoPlay(){
     if(!isAutoPlaying){
   //arrow function    

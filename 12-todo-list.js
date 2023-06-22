@@ -1,6 +1,10 @@
 let todoList = [];//[{name:'make a dinner',dueDate:'2023-06-05'}];
 renderTodoList();
 
+document.querySelector('.add-button').addEventListener('click',()=>{
+  addTodo();
+});
+
 function addTodo(){
 
   const task = document.querySelector('.js-todo-input');
@@ -35,9 +39,7 @@ function renderTodoList(){
                     <div class="list-date">
                       ${dueDate}
                     </div>
-                      <button class="delete-button" onclick="
-                        deleteTodo(${index},1);
-                        ">Delete</button>
+                      <button class="delete-button">Delete</button>
                     `;
 
       console.log(todoList);              
@@ -56,9 +58,7 @@ function renderTodoList(){
                     <div class="list-date">
                       ${dueDate}
                     </div>
-                      <button class="delete-button" onclick="
-                        deleteTodo(${i},1);
-                        ">Delete</button>
+                      <button class="delete-button">Delete</button>
                     `;
 
       console.log(todoList);              
@@ -66,6 +66,14 @@ function renderTodoList(){
     }
    */ 
     document.querySelector(".js-todo-list").innerHTML = todoListHTML;
+
+    document.querySelectorAll('.delete-button').forEach((deleteButton,index)=>{
+      console.log(deleteButton,index);
+      deleteButton.addEventListener('click',()=>{
+        console.log('click delete');
+        deleteTodo(index,1);
+      }); 
+    });
 }
  
 function deleteTodo(arg,nmb){
